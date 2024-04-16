@@ -7,7 +7,21 @@
 
 export function flatArrays(array) {
   // Your code goes here...
+  let arr2 = [];
 
+  for (let element of array) {
+    const isNotAnArray = !element.length;
+    
+    if (isNotAnArray) {
+      arr2.push();
+    } else if (!isNotAnArray) {
+      for (let i = 0; i < element.length; i++) {
+        arr2.push(element[i]);
+      }
+    }
+  }
+
+  return arr2;
 }
 
 

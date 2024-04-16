@@ -10,20 +10,31 @@
 
 export function getAverage(array) {
   // Your code goes here...
-
+  var arraySum = 0;
+  for (var i = 0; i < array.length; i++) {
+    arraySum = arraySum + array[i];
+  }
+  return arraySum / array.length;
 }
 
 
 /** 
  * PART 2
- * Create a getStringSum(str) function that returns the sum of any integers that are in the string.
+ * Create a getStringSum(str) function that returns the sum of 
+ * any integers that are in the string.
  * Example1: getStringSum("GH2U87A") => 17
  * Example2: getStringSum("GHIUJUHSG") => 0
  * */ 
 
 export function getStringSum(str) {
   // Your code goes here...
-
+  var stringSum = 0;
+  for (var i = 0; i < str.length; i++) {
+    if (Number.isInteger(Number.parseFloat(str[i]))) {
+     stringSum = stringSum + Number.parseFloat(str[i]);
+    }
+  }
+  return stringSum;
 }
 
 
