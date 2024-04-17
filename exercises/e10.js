@@ -10,7 +10,13 @@ export function getClientsWithLetterInName(array, letter) {
   for (let bankAccount of array) {
     const clientName = bankAccount.name;
     const splicedName = clientName.toLowerCase();
-    const hasLetterInName = splicedName.match(letter);
+    let hasLetterInName = false;
+
+    for (let letterInName of splicedName) {
+      if (letterInName === letter) {
+        hasLetterInName = true;
+      }
+    }
 
     if (hasLetterInName) {
       clientsWithLetterInName.push(clientName);

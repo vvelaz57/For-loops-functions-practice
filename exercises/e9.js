@@ -10,7 +10,7 @@ export function getClientsWithBalanceOverOneHundred(array) {
   // Your code goes here...
   let accountsAboveOneHundred = [];
   for (let bankAccount of array) {
-    const overOneHundred = bankAccount.balance >= 100.00;
+    const overOneHundred = bankAccount.balance > 100;
     if (overOneHundred) {
       accountsAboveOneHundred.push(bankAccount);
     }

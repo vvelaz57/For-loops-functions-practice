@@ -9,7 +9,7 @@ export function getAllWithdrawals(array) {
   let withdrawalSumsPerClient = [];
   for (let bankAccount of array) {
     const withdrawals = bankAccount.withdrawals;
-    var withdrawalSum = 0;
+    let withdrawalSum = 0;
 
     if (!withdrawals) {
       withdrawalSumsPerClient.push(withdrawalSum);

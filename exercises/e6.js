@@ -7,9 +7,9 @@ import { bankAccounts } from "../data/data";
 
 export function getClientWithNoMoney(array) {
   // Your code goes here...
-  var names = [];
-  for (var i = 0; i < array.length; i++) {
-    if (bankAccounts[i].balance === 0.0) {
+  let names = [];
+  for (let i = 0; i < array.length; i++) {
+    if (bankAccounts[i].balance === 0) {
       names.push(bankAccounts[i].name);
     }
   }

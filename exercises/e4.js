@@ -5,9 +5,13 @@
 
 export function findMinValueInArray(array) {
   // Your code goes here...
-  for (var i = 0; i < array.length; i++) {
-    if (array[i] < array[(i + 1)]) {
-      var arrayMin = array[i];
+  let arrayMin;
+  for (let value of array) {
+    const isMinValue = !arrayMin;
+    const isLessThan = arrayMin && value < arrayMin;
+
+    if (isMinValue || isLessThan) {
+      arrayMin = value;
     }
   }
   return arrayMin;
@@ -15,10 +19,13 @@ export function findMinValueInArray(array) {
 
 export function findMaxValueInArray(array) {
   // Your code goes here...
-  arrayMax = array[0];
-  for (var i = 0; i < array.length; i++) {
-    if (array[i] > arrayMax) {
-      var arrayMax = array[i];
+  let arrayMax;
+  for (let value of array) {
+    const isMaxValue = !arrayMax;
+    const isGreaterThan = arrayMax && value > arrayMax;
+
+    if (isMaxValue || isGreaterThan) {
+      arrayMax = value;
     }
   }
   return arrayMax;

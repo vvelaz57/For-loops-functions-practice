@@ -10,8 +10,8 @@
 
 export function getAverage(array) {
   // Your code goes here...
-  var arraySum = 0;
-  for (var i = 0; i < array.length; i++) {
+  let arraySum = 0;
+  for (let i = 0; i < array.length; i++) {
     arraySum = arraySum + array[i];
   }
   return arraySum / array.length;
